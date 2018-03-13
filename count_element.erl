@@ -1,5 +1,5 @@
 -module(count_element).
--export([main/0]).
+-export([main/0, count_element/1]).
 
 count_element(L) ->
 	c_element(L, #{}).
