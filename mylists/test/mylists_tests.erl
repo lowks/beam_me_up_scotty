@@ -10,5 +10,9 @@ drop_nth_element_test_() ->
           { "Testing drop element from empty list",
           ?_assertEqual([], mylists:drop_nth_element([], 1))},
           { "Testing drop n bigger than length of list",
-          ?_assertEqual([1,2], mylists:drop_nth_element([1,2], 10))}   
+          ?_assertEqual([1,2], mylists:drop_nth_element([1,2], 10))},
+          { "Testing drop n that is a negative value",
+          ?_assertEqual([1], mylists:drop_nth_element([1,2], -1))},
+          { "Testing drop n that two negative values from the back",
+          ?_assertEqual([1,2,3,5], mylists:drop_nth_element([1,2,3,4,5], -2))} 
          ].

@@ -15,6 +15,9 @@ do_drop_nth_element([],_,_) -> [];
 
 do_drop_nth_element(L, N, _) when N > length(L) -> L;
 
+do_drop_nth_element(L, N, _) when N < 0 ->
+    lists:reverse(drop_nth_element(lists:reverse(L), -N));
+
 do_drop_nth_element([_H|T], N, N) ->
     do_drop_nth_element(T, N, N+1);
 
