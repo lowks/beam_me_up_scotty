@@ -8,6 +8,8 @@
 %% API functions
 %%====================================================================
 
+% Drop nth element
+
 drop_nth_element(L, N) ->
     do_drop_nth_element(L, N, 1).
 
@@ -23,6 +25,17 @@ do_drop_nth_element([_H|T], N, N) ->
 
 do_drop_nth_element([H|T], N, M) ->
     [H] ++ do_drop_nth_element(T, N, M+1).
+
+% reverse the list
+
+reverse(L) ->
+    reverse(L, []).
+
+reverse([], Result) ->
+    Result;
+
+reverse([H|T], Result) ->
+    reverse(T, [H]++Result).
 
 %%====================================================================
 %% Internal functions
