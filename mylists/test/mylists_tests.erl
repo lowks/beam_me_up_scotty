@@ -14,7 +14,7 @@ drop_nth_element_test_() ->
           { "Testing drop n that is a negative value",
           ?_assertEqual([1], mylists:drop_nth_element([1,2], -1))},
           { "Testing drop n that two negative values from the back",
-          ?_assertEqual([1,2,3,5], mylists:drop_nth_element([1,2,3,4,5], -2))} 
+          ?_assertEqual([1,2,3,5], mylists:drop_nth_element([1,2,3,4,5], -2))}].
 
 reverse_list_test_() ->
         [{"Reversing a normal list",
