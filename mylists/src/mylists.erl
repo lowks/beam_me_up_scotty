@@ -37,6 +37,25 @@ reverse([], Result) ->
 reverse([H|T], Result) ->
     reverse(T, [H]++Result).
 
+% list from range
+
+list_from_range(M, M) ->
+    [];
+
+list_from_range(Min, Max) ->
+    list_from_range(Min, Max, []).
+
+list_from_range(Min, Max, Result) when Min /= Max, Max > Min ->
+    list_from_range(Min + 1, Max, [Min] ++ Result);
+
+list_from_range(Min, Max, Result) when Min /= Max, Min > Max ->
+    reverse(list_from_range(Max, Min));
+
+list_from_range(Min, Max, Result) when Min =:= Max, Min /= 0, Max /= 0  ->
+    list_from_range(0, 0, [Max] ++ Result);
+
+list_from_range(0, 0, Result) -> reverse(Result).
+
 %%====================================================================
 %% Internal functions
 %%====================================================================

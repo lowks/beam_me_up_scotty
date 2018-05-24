@@ -25,3 +25,24 @@ reverse_list_test_() ->
          }
         ].
 
+create_list_from_range_test_() ->
+        [{"Create a normal list from range 1-3",
+          ?_assertEqual([1,2,3], mylists:list_from_range(1,3))          
+         },
+         {"Create a normal list from range 1-10",
+          ?_assertEqual([1,2,3,4,5,6,7,8,9,10], mylists:list_from_range(1,10))          
+         },
+         {"Create a normal list from range 3-1",
+          ?_assertEqual([3,2,1], mylists:list_from_range(3,1))          
+         },
+         {"Create a normal list from range 10-1",
+          ?_assertEqual([10,9,8,7,6,5,4,3,2,1], mylists:list_from_range(10,1))          
+         },
+         {"Create a normal list from range 1-1",
+         ?_assertEqual([], mylists:list_from_range(1,1))          
+         },
+         {"Create a normal list from range 10-10",
+         ?_assertEqual([], mylists:list_from_range(10,10))          
+         }
+        ].
+
