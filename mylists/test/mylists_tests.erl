@@ -46,3 +46,12 @@ create_list_from_range_test_() ->
          }
         ].
 
+duplicate_elements_test_() ->
+        [{"Testing duplicate elements in a list",
+          ?_assertEqual([1,1,2,2,3,3], mylists:duplicate_elements([1,2,3]))
+         },
+         {"Testing duplicate elements in an empty list",
+          ?_assertEqual([], mylists:duplicate_elements([]))
+         }
+        ].
+

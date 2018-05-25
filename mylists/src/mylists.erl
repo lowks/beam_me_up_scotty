@@ -56,6 +56,19 @@ list_from_range(Min, Max, Result) when Min =:= Max, Min /= 0, Max /= 0  ->
 
 list_from_range(0, 0, Result) -> reverse(Result).
 
+% duplicate elements
+
+duplicate_elements([]) ->
+    [];
+
+duplicate_elements(L) ->
+    duplicate_elements(L, []).
+
+duplicate_elements([H|L], Result) ->
+    duplicate_elements(L, [H, H] ++ Result);
+
+duplicate_elements([], Result) -> reverse(Result).
+
 %%====================================================================
 %% Internal functions
 %%====================================================================
