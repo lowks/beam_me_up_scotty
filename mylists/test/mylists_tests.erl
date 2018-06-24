@@ -55,3 +55,12 @@ duplicate_elements_test_() ->
          }
         ].
 
+
+palindrome_test_() ->
+        [{"Testing palindrome function with palindrome list",
+          ?_assertEqual(true, mylists:is_palindrome([1,1,1]))},
+          {"Testing palindrome function with empty list",
+          ?_assertEqual(true, mylists:is_palindrome([]))}, 
+          {"Testing palindrome function with false list",
+          ?_assertEqual(false, mylists:is_palindrome([1,2,3]))}
+        ].

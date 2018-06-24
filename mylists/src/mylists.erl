@@ -69,6 +69,14 @@ duplicate_elements([H|L], Result) ->
 
 duplicate_elements([], Result) -> reverse(Result).
 
+% palindrome
+
+is_palindrome([]) ->
+    true;
+
+is_palindrome(L) ->
+    L == reverse(L).
+
 %%====================================================================
 %% Internal functions
 %%====================================================================
