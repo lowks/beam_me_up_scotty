@@ -77,6 +77,17 @@ is_palindrome([]) ->
 is_palindrome(L) ->
     L == reverse(L).
 
+% length_of_list
+
+length_of_list(L) ->
+    length_of_list(L, 0).
+
+length_of_list([H|T], Length) ->
+    length_of_list(T, Length + 1);
+
+length_of_list([], Length) ->
+    Length.
+
 %%====================================================================
 %% Internal functions
 %%====================================================================
