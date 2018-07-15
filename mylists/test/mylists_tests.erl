@@ -55,6 +55,14 @@ duplicate_elements_test_() ->
          }
         ].
 
+length_of_list_test_() ->
+        [{"Testing length of an empty list",
+          ?_assertEqual(0, mylists:length_of_list([]))
+         },
+         {"Testing length of a list with 3 elements",
+          ?_assertEqual(3, mylists:length_of_list([1, 1, 1]))
+         }
+        ].
 
 palindrome_test_() ->
         [{"Testing palindrome function with palindrome list",
