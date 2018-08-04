@@ -64,6 +64,13 @@ length_of_list_test_() ->
          }
         ].
 
+compress_list_test_() ->
+        [{"Testing compress an empty list.",
+          ?_assertEqual([], mylists:compress([]))},
+         {"Testing compress an empty list.", 
+          ?_assertEqual([a,b,c], mylists:compress([a,a,b,b,c,c]))}
+        ].
+
 palindrome_test_() ->
         [{"Testing palindrome function with palindrome list",
           ?_assertEqual(true, mylists:is_palindrome([1,1,1]))},

@@ -88,6 +88,21 @@ length_of_list([H|T], Length) ->
 length_of_list([], Length) ->
     Length.
 
+% compress list
+
+compress(L) ->
+    tail_compress(L, []).
+
+tail_compress([H | [H|T]], Result) ->
+    tail_compress(T, Result ++ [H]);
+
+tail_compress([], Result) ->
+    Result;
+
+tail_compress([], []) ->
+    [].
+
+
 %%====================================================================
 %% Internal functions
 %%====================================================================
