@@ -67,8 +67,12 @@ length_of_list_test_() ->
 compress_list_test_() ->
         [{"Testing compress an empty list.",
           ?_assertEqual([], mylists:compress([]))},
-         {"Testing compress an empty list.", 
-          ?_assertEqual([a,b,c], mylists:compress([a,a,b,b,c,c]))}
+         {"Testing compress a normal list with all repeating elements.", 
+          ?_assertEqual([a,b,c], mylists:compress([a,a,b,b,c,c]))},
+          {"Testing compress a normal list with mix of repeating and non repeating elements.",
+          ?_assertEqual([a,b,c], mylists:compress([a,b,b,c]))},
+          {"Testing compress a normal list with mix of repeating and non repeating elements part 2.",
+          ?_assertEqual([a,b,c], mylists:compress([a,a,b,c]))}
         ].
 
 palindrome_test_() ->
