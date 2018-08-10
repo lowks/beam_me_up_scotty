@@ -96,11 +96,14 @@ compress(L) ->
 tail_compress([H | [H|T]], Result) ->
     tail_compress(T, Result ++ [H]);
 
-tail_compress([], Result) ->
-    Result;
+tail_compress([H | [H2|T]], Result) ->
+    tail_compress([H2|T], Result ++ [H]);
 
-tail_compress([], []) ->
-    [].
+tail_compress([H|[]], Result) ->
+    tail_compress([], Result ++ [H]);
+
+tail_compress([], Result) ->
+    Result.
 
 
 %%====================================================================
