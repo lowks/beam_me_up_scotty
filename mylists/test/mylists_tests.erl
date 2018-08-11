@@ -86,5 +86,7 @@ palindrome_test_() ->
 
 range_test_() ->
         [{"Testing range test",
-          ?_assertEqual([1,2,3], mylists:range(1,3))}
+          ?_assertEqual([1,2,3], mylists:range(1,3))},
+        {"Testing range test with same start and end number",
+          ?_assertEqual([], mylists:range(3,3))}
         ].
