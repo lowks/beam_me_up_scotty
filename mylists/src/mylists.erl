@@ -105,6 +105,22 @@ tail_compress([H|[]], Result) ->
 tail_compress([], Result) ->
     Result.
 
+% range
+
+range(Start, Start) ->
+    [];
+
+range(Start, Finish) ->
+    range(Start + 1, Finish, [Start]).
+
+range(Start, Start, Result) -> 
+    lists:append(Result, [Start]);
+
+range(Start, Finish, Result) ->
+    range(Start + 1, Finish, lists:append(Result, [Start])).
+
+
+
 
 %%====================================================================
 %% Internal functions
