@@ -83,3 +83,8 @@ palindrome_test_() ->
           {"Testing palindrome function with false list",
           ?_assertEqual(false, mylists:is_palindrome([1,2,3]))}
         ].
+
+range_test_() ->
+        [{"Testing range test",
+          ?_assertEqual([1,2,3], mylists:range(1,3))}
+        ].
