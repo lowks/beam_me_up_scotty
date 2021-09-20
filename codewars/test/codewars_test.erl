@@ -15,4 +15,9 @@ codewars_test_() ->
                    {"Testing for 1, 4", ?_assert   (codewars:lovefunc(1, 4))},
                    {"Testing for 2, 2", ?_assertNot(codewars:lovefunc(2, 2))},
                    {"Testing for 0, 1", ?_assert   (codewars:lovefunc(0, 1))},
-                   {"Testing for 0, 0", ?_assertNot(codewars:lovefunc(0, 0))}]}.
+                   {"Testing for 0, 0", ?_assertNot(codewars:lovefunc(0, 0))},
+                   {"Summation: Testing for 1", ?_assertEqual(1, codewars:summation(1))},
+                   {"Summation: Testing for 8", ?_assertEqual(36, codewars:summation(8))},
+                   {"Summation: Testing for 22", ?_assertEqual(253, codewars:summation(22))},
+                   {"Summation: Testing for 100", ?_assertEqual(5050, codewars:summation(100))},
+                   {"Summation: Testing for 213", ?_assertEqual(22791, codewars:summation(213))}]}.
