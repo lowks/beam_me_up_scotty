@@ -38,6 +38,19 @@ lovefunc(Flower1, Flower2) when (Flower1 rem 2 =/= 0) and (Flower2 rem 2 =:= 0) 
 lovefunc(_, _) -> 
   false.
 
+% Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+% For example:
+
+% summation(2) -> 3
+% 1 + 2
+
+% summation(8) -> 36
+% 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+
+summation(0) -> 0;
+summation(N) -> N + summation(N-1).
+
 
 %%====================================================================
 %% Internal functions
