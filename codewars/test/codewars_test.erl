@@ -49,4 +49,9 @@ codewars_test_() ->
                    {"Max Product: max_product([-17, -8, -102, -309], 2)", ?_assertEqual(136, codewars:max_product([-17, -8, -102, -309], 2))}, 
                    {"Max Product: max_product([10, 3, -27, -1], 3)", ?_assertEqual(-30, codewars:max_product([10, 3, -27, -1], 3))}, 
                    {"Max Product: max_product([14, 29, -28, 39, -16, -48], 4)", ?_assertEqual(-253344, codewars:max_product([14, 29, -28, 39, -16, -48], 4))}, 
-                   {"Max Product: max_product([1], 1)", ?_assertEqual(1, codewars:max_product([1], 1))}]}.
+                   {"Max Product: max_product([1], 1)", ?_assertEqual(1, codewars:max_product([1], 1))},
+                   {"past(0, 1, 1)", ?_assertEqual(61000, codewars:past(0, 1, 1))},
+                   {"past(1, 1, 1)", ?_assertEqual(3661000, codewars:past(1, 1, 1))},
+                   {"past(0, 0, 0)", ?_assertEqual(0, codewars:past(0, 0, 0))},
+                   {"past(1, 0, 1)", ?_assertEqual(3601000, codewars:past(1, 0, 1))},
+                   {"past(1, 0, 0)", ?_assertEqual(3600000, codewars:past(1, 0, 0))}]}.
