@@ -54,4 +54,5 @@ codewars_test_() ->
                    {"past(1, 1, 1)", ?_assertEqual(3661000, codewars:past(1, 1, 1))},
                    {"past(0, 0, 0)", ?_assertEqual(0, codewars:past(0, 0, 0))},
                    {"past(1, 0, 1)", ?_assertEqual(3601000, codewars:past(1, 0, 1))},
-                   {"past(1, 0, 0)", ?_assertEqual(3600000, codewars:past(1, 0, 0))}]}.
+                   {"past(1, 0, 0)", ?_assertEqual(3600000, codewars:past(1, 0, 0))},
+                   {"Middle test", "Returns \"t\" for \"something\".", ?_assertEqual("t", codewars:middle("something"))}]}.

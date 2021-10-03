@@ -180,6 +180,20 @@ product([H|T], Result) ->
 
 past(H, M, S) -> timer:hours(H) + timer:minutes(M) + timer:seconds(S).
 
+% You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+% #Examples:
+
+% Kata.getMiddle("test") should return "es"
+% Kata.getMiddle("testing") should return "t"
+% Kata.getMiddle("middle") should return "dd"
+% Kata.getMiddle("A") should return "A"
+
+middle(String) when length(String) rem 2  =:= 0 ->
+    lists:sublist(String, length(String) div 2, 2);
+
+middle(String) when length(String) rem 2  =:= 1 ->
+    lists:sublist(String, length(String) div 2 + 1, 1).
+
 %%====================================================================
 %% Internal functions
 %%====================================================================
